@@ -1,0 +1,26 @@
+{
+  "sessionId": "sess_5tb1i32r",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER]"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here’s what we can do together:\n\n🤖 Poses  \n\"Make the robot wave its right arm.\"  \n\"Show the robot take a balanced stepping pose.\"  \n\"Put the robot in a friendly T‑pose.\"\n\n✋ Hands  \n\"Open both hands wide like a greeting.\"  \n\"Close the left hand into a fist.\"  \n\"Flex the right hand fingers to point.\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER]"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here’s what we can do together:\n\n🤖 Poses  \n\"Make the robot wave its right arm.\"  \n\"Show the robot take a balanced stepping pose.\"  \n\"Put the robot in a friendly T‑pose.\"\n\n✋ Hands  \n\"Open both hands wide like a greeting.\"  \n\"Close the left hand into a fist.\"  \n\"Flex the right hand fingers to point.\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780337714945
+}

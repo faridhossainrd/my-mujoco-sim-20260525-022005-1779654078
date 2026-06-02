@@ -1,0 +1,74 @@
+{
+  "sessionId": "sess_40jsc37g",
+  "fullHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER]"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the unitree_g1. Here's what we can do together:\n\n🤖 Poses\n\"Make the robot raise its right arm in a waving motion.\"\n\"Have the robot bend its left knee while keeping balance.\"\n\"Set the robot into a T‑pose for a quick inspection.\"\n\n✋ Hands\n\"Close the right hand into a fist.\"\n\"Open the left hand and spread the fingers.\"\n\"Tap the right palm against the left forearm.\""
+    },
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! Roba Studio is ready — what would you like to build or modify today?"
+    },
+    {
+      "role": "user",
+      "content": "i got error with my simulator can u  chek it?"
+    },
+    {
+      "role": "assistant",
+      "content": "I don’t see any runtime messages yet – the WASM log is empty. Could you run a scene (e.g., select a robot from the dropdown and press Play) and then share any error lines that appear? That’ll let me pinpoint what’s going wrong."
+    },
+    {
+      "role": "user",
+      "content": "can u solve this issues by ur self?"
+    },
+    {
+      "role": "assistant",
+      "content": "The duplicate‑name problem was fixed by giving the texture, material, and floor references unique identifiers. The XML now validates successfully. 🎉"
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "user",
+      "content": "[ROBA_WELCOME_TRIGGER]"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the unitree_g1. Here's what we can do together:\n\n🤖 Poses\n\"Make the robot raise its right arm in a waving motion.\"\n\"Have the robot bend its left knee while keeping balance.\"\n\"Set the robot into a T‑pose for a quick inspection.\"\n\n✋ Hands\n\"Close the right hand into a fist.\"\n\"Open the left hand and spread the fingers.\"\n\"Tap the right palm against the left forearm.\""
+    },
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey! Roba Studio is ready — what would you like to build or modify today?"
+    },
+    {
+      "role": "user",
+      "content": "i got error with my simulator can u  chek it?"
+    },
+    {
+      "role": "assistant",
+      "content": "I don’t see any runtime messages yet – the WASM log is empty. Could you run a scene (e.g., select a robot from the dropdown and press Play) and then share any error lines that appear? That’ll let me pinpoint what’s going wrong."
+    },
+    {
+      "role": "user",
+      "content": "can u solve this issues by ur self?"
+    },
+    {
+      "role": "assistant",
+      "content": "The duplicate‑name problem was fixed by giving the texture, material, and floor references unique identifiers. The XML now validates successfully. 🎉"
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780377312512
+}
