@@ -1,0 +1,75 @@
+<mujoco model="scene_simple_quad">
+  <option timestep="0.002" gravity="0 0 -9.81"/>
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+  </visual>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072"/>
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge"
+             rgb1="0.2 0.3 0.4" rgb2="0.1 0.2 0.3" markrgb="0.8 0.8 0.8"
+             width="300" height="300"/>
+    <material name="ground_mat" texture="groundplane" texuniform="true"
+              texrepeat="5 5" reflectance="0.2"/>
+    <material name="body_mat" rgba="0.8 0.6 0.4 1"/>
+    <material name="leg_mat" rgba="0.4 0.4 0.8 1"/>
+  </asset>
+
+  <worldbody>
+    <geom name="floor" type="plane" size="0 0 0.05"
+          material="ground_mat" condim="3"/>
+
+    <body name="base" pos="0 0 0.25">
+      <freejoint name="base_free"/>
+      <geom type="box" size="0.15 0.08 0.05" material="body_mat"/>
+
+      <body name="leg_FL" pos="0.1 0.06 0">
+        <joint name="hip_FL" type="hinge" axis="0 1 0" range="-0.5 0.5"/>
+        <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.02" material="leg_mat"/>
+        <body name="shin_FL" pos="0 0 -0.15">
+          <joint name="knee_FL" type="hinge" axis="0 1 0" range="-1.5 0"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.015" material="leg_mat"/>
+        </body>
+      </body>
+
+      <body name="leg_FR" pos="0.1 -0.06 0">
+        <joint name="hip_FR" type="hinge" axis="0 1 0" range="-0.5 0.5"/>
+        <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.02" material="leg_mat"/>
+        <body name="shin_FR" pos="0 0 -0.15">
+          <joint name="knee_FR" type="hinge" axis="0 1 0" range="-1.5 0"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.015" material="leg_mat"/>
+        </body>
+      </body>
+
+      <body name="leg_RL" pos="-0.1 0.06 0">
+        <joint name="hip_RL" type="hinge" axis="0 1 0" range="-0.5 0.5"/>
+        <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.02" material="leg_mat"/>
+        <body name="shin_RL" pos="0 0 -0.15">
+          <joint name="knee_RL" type="hinge" axis="0 1 0" range="-1.5 0"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.015" material="leg_mat"/>
+        </body>
+      </body>
+
+      <body name="leg_RR" pos="-0.1 -0.06 0">
+        <joint name="hip_RR" type="hinge" axis="0 1 0" range="-0.5 0.5"/>
+        <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.02" material="leg_mat"/>
+        <body name="shin_RR" pos="0 0 -0.15">
+          <joint name="knee_RR" type="hinge" axis="0 1 0" range="-1.5 0"/>
+          <geom type="capsule" fromto="0 0 0 0 0 -0.15" size="0.015" material="leg_mat"/>
+        </body>
+      </body>
+
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="hip_FL" joint="hip_FL" ctrlrange="-1 1" gear="100"/>
+    <motor name="knee_FL" joint="knee_FL" ctrlrange="-1 1" gear="100"/>
+    <motor name="hip_FR" joint="hip_FR" ctrlrange="-1 1" gear="100"/>
+    <motor name="knee_FR" joint="knee_FR" ctrlrange="-1 1" gear="100"/>
+    <motor name="hip_RL" joint="hip_RL" ctrlrange="-1 1" gear="100"/>
+    <motor name="knee_RL" joint="knee_RL" ctrlrange="-1 1" gear="100"/>
+    <motor name="hip_RR" joint="hip_RR" ctrlrange="-1 1" gear="100"/>
+    <motor name="knee_RR" joint="knee_RR" ctrlrange="-1 1" gear="100"/>
+  </actuator>
+</mujoco>

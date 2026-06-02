@@ -939,6 +939,8 @@ export function drawTendonsAndFlex(mujocoRoot, model, data) {
 export async function downloadExampleScenesFolder(mujoco) {
   // Load file list from index.json
   let allFiles = [];
+  // Register simple_quad scene
+  allFiles.push("robots/simple_quad/xmls/simple_quad.xml");
   try {
     const indexResp = await fetch('./assets/scenes/index.json');
     if (indexResp.ok) {
