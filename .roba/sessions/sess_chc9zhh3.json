@@ -1,0 +1,16 @@
+{
+  "sessionId": "sess_chc9zhh3",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses  \n\"Make the robot wave its right arm\"  \n\"Show a smooth bowing gesture\"  \n\"Create a natural walking cycle\"\n\n⚙️ Simulation & Physics  \n\"Test balance on uneven terrain\"  \n\"Explore torque limits during a jump\"  \n\"Analyze the effects of different friction settings\"\n\n🛠️ Customise & Extend  \n\"Add a new sensor to the torso\"  \n\"Swap the default mesh for a custom one\"  \n\"Create a control UI for real‑time pose tweaking\""
+    },
+    {
+      "role": "user",
+      "content": "my simulator not working sowing memory access out of bounds"
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780409010998
+}

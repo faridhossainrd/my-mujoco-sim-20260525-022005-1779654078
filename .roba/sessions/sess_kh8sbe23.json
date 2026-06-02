@@ -28,9 +28,13 @@
     {
       "role": "assistant",
       "content": "I’m ready to help—just let me know what you’d like to work on (e.g., creating or adjusting a robot model, adding actuator controls, fixing a scene, etc.)."
+    },
+    {
+      "role": "user",
+      "content": "my simulator not working sowing memory access out of bounds"
     }
   ],
   "compressionCount": 0,
   "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
-  "savedAt": 1780408042990
+  "savedAt": 1780408371954
 }

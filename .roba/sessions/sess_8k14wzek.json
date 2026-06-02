@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_8k14wzek",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the **Unitree G1**. Here's what we can do together:\n\n🤖 Motion & Poses  \n\"Show the robot raising its arm to wave hello.\"  \n\"Make the robot turn its torso to look around.\"  \n\"Create a smooth walking stride across the floor.\"\n\n⚙️ Simulation & Physics  \n\"Test balance while the robot lifts one leg.\"  \n\"Observe how gravity affects a hand‑clench gesture.\"  \n\"Run a stability check with a gentle forward push.\"\n\n🛠️ Customise & Extend  \n\"Add a new sensor to the robot's wrist for feedback.\"  \n\"Swap out the leg geometry for a lighter version.\"  \n\"Create a custom controller to blend walking and waving.\""
+    },
+    {
+      "role": "user",
+      "content": "Change the box size 0.3 meter more bigger in test_box.xml"
+    },
+    {
+      "role": "assistant",
+      "content": "In the test box scene, I enlarged the box geometry to 0.35 m per side (0.2 m + 0.3 m). The change is now saved."
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780409210769
+}
