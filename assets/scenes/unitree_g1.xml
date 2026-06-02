@@ -2,9 +2,9 @@
   <compiler angle="radian" meshdir="meshes" />
 
   <default>
-    <joint damping="0.05" armature="0.01" frictionloss="0.2"/>
+     frictionloss="0.2"/> 
     </default>
-    <default class="leg_motor">
+     <default class="leg_motor">
       <joint damping="0.05" armature="0.01" frictionloss="0.2"/>
     </default>
     <default class="ankle_motor">
