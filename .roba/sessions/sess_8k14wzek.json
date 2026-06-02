@@ -20,9 +20,21 @@
     {
       "role": "assistant",
       "content": "The tag `<freejoint/>` appears in three scene files:\n\n- **assets/scenes/empty_room.xml** – line 26  \n- **assets/scenes/simple_quad.xml** – line 23 (`<freejoint name=\"base_free\"/>`)  \n- **assets/scenes/test_box.xml** – line 16  "
+    },
+    {
+      "role": "user",
+      "content": "i got error with simulator not working"
+    },
+    {
+      "role": "assistant",
+      "content": "`main.js` is clean — no unsafe `data.ctrl` access. Both JS files are healthy.\n\n---\n\n✅ All issues have been fixed. Here's a summary of what was resolved in `unitree_g1.xml`:\n\n1. **Default class nesting** — The named default classes (`leg_motor`, `ankle_motor`, etc.) were incorrectly placed outside the top-level `<default>` block; they've been moved inside it as required by MuJoCo.\n2. **Missing `torso_motor` class** — The three waist joints referenced `class=\"torso_motor\"` which didn't exist in the defaults; the class declaration has been added.\n\n**Please refresh the simulator to check if the error is resolved.** 🎉"
+    },
+    {
+      "role": "user",
+      "content": "ok now change leg_motor joint damping= 0.02 and armature = 0.03"
     }
   ],
   "compressionCount": 0,
   "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
-  "savedAt": 1780409398223
+  "savedAt": 1780424373045
 }
