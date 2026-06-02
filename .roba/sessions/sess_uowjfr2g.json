@@ -1,0 +1,18 @@
+{
+  "sessionId": "sess_uowjfr2g",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! Roba Studio is ready — what robot would you like to create or modify? Please provide the robot name and any specific features you need."
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! Roba Studio is ready — what robot would you like to create or modify? Please provide the robot name and any specific features you need."
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780380997857
+}

@@ -1,0 +1,18 @@
+{
+  "sessionId": "sess_nqt1qngx",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the **Unitree G1**. Here's what we can do together:\n\n🤖 Motion & Poses  \n\"Make the robot wave its right arm\"  \n\"Show a smooth bowing gesture\"  \n\"Create a dynamic walking sequence\"\n\n⚙️ Simulation & Physics  \n\"Test balance on uneven terrain\"  \n\"Adjust joint stiffness for realistic arm swings\"  \n\"Visualise contact forces on the feet\"\n\n🛠️ Customise & Extend  \n\"Swap the robot's color scheme\"  \n\"Add a simple gripper to the hand\"  \n\"Introduce a new sensor to monitor torso tilt\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the **Unitree G1**. Here's what we can do together:\n\n🤖 Motion & Poses  \n\"Make the robot wave its right arm\"  \n\"Show a smooth bowing gesture\"  \n\"Create a dynamic walking sequence\"\n\n⚙️ Simulation & Physics  \n\"Test balance on uneven terrain\"  \n\"Adjust joint stiffness for realistic arm swings\"  \n\"Visualise contact forces on the feet\"\n\n🛠️ Customise & Extend  \n\"Swap the robot's color scheme\"  \n\"Add a simple gripper to the hand\"  \n\"Introduce a new sensor to monitor torso tilt\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780382176866
+}

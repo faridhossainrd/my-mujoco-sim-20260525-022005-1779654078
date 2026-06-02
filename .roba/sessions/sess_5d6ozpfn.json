@@ -1,0 +1,34 @@
+{
+  "sessionId": "sess_5d6ozpfn",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses\n\"Make the robot wave hello with a smooth arm swing\"\n\"Create a bowing gesture to greet a virtual audience\"\n\"Show a walking cycle across the scene floor\"\n\n⚙️ Simulation & Physics\n\"Adjust gravity and friction to see how the robot balances on slopes\"\n\"Apply external forces to test stability under pushes\"\n\"Experiment with joint limit configurations for safe motion\"\n\n🛠️ Customise & Extend\n\"Swap limb dimensions or colors to design a new variant\"\n\"Add custom sensors like touch or force to the feet\"\n\"Integrate a new controller for autonomous navigation\""
+    },
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi! Roba Studio is ready — what robot or scene would you like to work on today?"
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses\n\"Make the robot wave hello with a smooth arm swing\"\n\"Create a bowing gesture to greet a virtual audience\"\n\"Show a walking cycle across the scene floor\"\n\n⚙️ Simulation & Physics\n\"Adjust gravity and friction to see how the robot balances on slopes\"\n\"Apply external forces to test stability under pushes\"\n\"Experiment with joint limit configurations for safe motion\"\n\n🛠️ Customise & Extend\n\"Swap limb dimensions or colors to design a new variant\"\n\"Add custom sensors like touch or force to the feet\"\n\"Integrate a new controller for autonomous navigation\""
+    },
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi! Roba Studio is ready — what robot or scene would you like to work on today?"
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780382306223
+}

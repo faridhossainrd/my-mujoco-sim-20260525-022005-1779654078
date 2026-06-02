@@ -1,0 +1,18 @@
+{
+  "sessionId": "sess_ebedkarm",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses\n\"Show the robot walking forward and turning\"\n\"Make the robot raise its arms in a wave\"\n\"Pose the robot in a balanced T‑pose for inspection\"\n\n⚙️ Simulation & Physics\n\"Experiment with different ground friction levels\"\n\"Test the effect of payload changes on balance\"\n\"Run a stability test while the robot leans forward\"\n\n🛠️ Customise & Extend\n\"Add new sensors to the robot’s wrists\"\n\"Swap the robot’s legs for longer ones\"\n\"Create a custom controller to follow a moving target\""
+    }
+  ],
+  "agentHistory": [
+    {
+      "role": "assistant",
+      "content": "Hey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses\n\"Show the robot walking forward and turning\"\n\"Make the robot raise its arms in a wave\"\n\"Pose the robot in a balanced T‑pose for inspection\"\n\n⚙️ Simulation & Physics\n\"Experiment with different ground friction levels\"\n\"Test the effect of payload changes on balance\"\n\"Run a stability test while the robot leans forward\"\n\n🛠️ Customise & Extend\n\"Add new sensors to the robot’s wrists\"\n\"Swap the robot’s legs for longer ones\"\n\"Create a custom controller to follow a moving target\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780381865376
+}
