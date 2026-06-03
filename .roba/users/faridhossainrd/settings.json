@@ -1,6 +1,6 @@
 {
-  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-  "superAgentModel": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "model": "anthropic/claude-sonnet-4.5",
+  "superAgentModel": "anthropic/claude-sonnet-4.5",
   "projectRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
   "superAgentEnabled": false
 }
