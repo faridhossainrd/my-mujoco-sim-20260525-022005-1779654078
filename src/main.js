@@ -237,6 +237,70 @@ export class MuJoCoDemo {
           }
         }
 
+        // ── Unitree G1 — Right Hand Open / Close animation ──────────────────
+        if (this.params["scene"] === "unitree_g1.xml" && this.model.nu >= 43) {
+          const t          = this.data.time;
+          const cyclePeriod = 2.0;                          // 2 s per open-close cycle
+          const phase      = (t % cyclePeriod) / cyclePeriod; // 0 → 1
+
+          // Smooth sinusoidal blend: 0 = fully open, 1 = fully closed
+          const grip = (1 - Math.cos(phase * 2 * Math.PI)) / 2;
+
+          // Right thumb  (closes with NEGATIVE values)
+          this.data.ctrl[36] = -0.5  * grip;   // right_thumb_0
+          this.data.ctrl[37] = -0.8  * grip;   // right_thumb_1
+          this.data.ctrl[38] = -1.5  * grip;   // right_thumb_2
+
+          // Right middle (closes with POSITIVE values)
+          this.data.ctrl[39] =  1.5  * grip;   // right_middle_0
+          this.data.ctrl[40] =  1.7  * grip;   // right_middle_1
+
+          // Right index  (closes with POSITIVE values)
+          this.data.ctrl[41] =  1.5  * grip;   // right_index_0
+          this.data.ctrl[42] =  1.7  * grip;   // right_index_1
+
+          // Raise the right arm slightly so the hand is clearly visible
+          this.data.ctrl[29] = -1.0;            // right_shoulder_pitch  — arm forward+up
+          this.data.ctrl[30] = -0.4;            // right_shoulder_roll   — arm slightly out
+          this.data.ctrl[32] =  0.8;            // right_elbow           — gentle bend
+        }
+        // ── SALUTE (hardcoded, always on for unitree_g1.xml) ─────────────────
+        if (this.params["scene"] === "unitree_g1.xml") {
+          const t = this.data.time;
+
+          // Phase: 0→1 over 1.5 s, hold salute, then ease back — full cycle 4 s
+          const cycleDur = 4.0;
+          const phase    = (t % cycleDur) / cycleDur;          // 0..1
+          // ease in (0–0.25), hold (0.25–0.75), ease out (0.75–1.0)
+          let salute = 0;
+          if (phase < 0.25) {
+            salute = (1 - Math.cos(phase / 0.25 * Math.PI)) / 2;
+          } else if (phase < 0.75) {
+            salute = 1.0;
+          } else {
+            salute = (1 - Math.cos((1 - (phase - 0.75) / 0.25) * Math.PI)) / 2;
+          }
+
+          // Right arm — raise to temple
+          this.data.ctrl[29] = -1.4  * salute;   // right_shoulder_pitch  — arm up
+          this.data.ctrl[30] = -0.25 * salute;   // right_shoulder_roll   — slightly out
+          this.data.ctrl[31] =  0.3  * salute;   // right_shoulder_yaw    — rotate inward
+          this.data.ctrl[32] =  1.4  * salute;   // right_elbow           — bent for salute
+          this.data.ctrl[33] =  0.0;             // right_wrist_roll
+          this.data.ctrl[34] = -0.3  * salute;   // right_wrist_pitch     — hand flat
+          this.data.ctrl[35] =  0.2  * salute;   // right_wrist_yaw       — fingers toward temple
+
+          // Right hand — fully open / flat for a proper salute
+          this.data.ctrl[36] =  0.0;  // right_thumb_0
+          this.data.ctrl[37] =  0.0;  // right_thumb_1
+          this.data.ctrl[38] =  0.0;  // right_thumb_2
+          this.data.ctrl[39] =  0.0;  // right_middle_0
+          this.data.ctrl[40] =  0.0;  // right_middle_1
+          this.data.ctrl[41] =  0.0;  // right_index_0
+          this.data.ctrl[42] =  0.0;  // right_index_1
+        }
+        // ─────────────────────────────────────────────────────────────────────
+
         // Jitter the control state with gaussian random noise
         if (this.params["ctrlnoisestd"] > 0.0) {
           let rate  = Math.exp(-timestep / Math.max(1e-10, this.params["ctrlnoiserate"]));
