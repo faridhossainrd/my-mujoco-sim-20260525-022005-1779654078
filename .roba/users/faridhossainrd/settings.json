@@ -1,5 +1,5 @@
 {
-  "model": "anthropic/claude-sonnet-4.5",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free",
   "superAgentModel": "anthropic/claude-sonnet-4.5",
   "projectRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
   "superAgentEnabled": false
