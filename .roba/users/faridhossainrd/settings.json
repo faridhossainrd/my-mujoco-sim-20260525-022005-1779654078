@@ -1,5 +1,5 @@
 {
-  "model": "google/gemma-4-26b-a4b-it:free",
+  "model": "arcee-ai/trinity-large-thinking",
   "superAgentModel": "anthropic/claude-sonnet-4.5",
   "projectRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
   "superAgentEnabled": false

@@ -387,6 +387,67 @@ export class MuJoCoDemo {
       }
     }
 
+    // Unitree G1 hardcoded activities
+    if (this.params["scene"] === "unitree_g1.xml") {
+      const t = this.data.time;
+      
+      // Right hand open/close (1 Hz cycle)
+      const handPhase = (t * Math.PI) % (2 * Math.PI);
+      const handEase = (1 - Math.cos(handPhase)) / 2;
+      this.data.ctrl[29] = -1.0;  // right_shoulder_pitch: arm raised
+      this.data.ctrl[30] = -0.4;  // right_shoulder_roll: arm out
+      this.data.ctrl[32] = 0.8;   // right_elbow: bent
+      this.data.ctrl[36] = -0.5 * handEase;  // right_thumb_0
+      this.data.ctrl[37] = -0.8 * handEase;  // right_thumb_1
+      this.data.ctrl[38] = -1.5 * handEase;  // right_thumb_2
+      this.data.ctrl[39] = 1.5 * handEase;   // right_middle_0
+      this.data.ctrl[40] = 1.7 * handEase;   // right_middle_1
+      this.data.ctrl[41] = 1.5 * handEase;   // right_index_0
+      this.data.ctrl[42] = 1.7 * handEase;   // right_index_1
+
+      // Salute activity (4-second cycle, offset by 2 seconds)
+      const salutePhase = ((t - 2) * Math.PI / 2) % (4 * Math.PI);
+      const saluteEase = Math.max(0, Math.min(1, 
+        (1 - Math.cos(salutePhase)) / 2 * (t >= 2 ? 1 : 0)
+      ));
+      this.data.ctrl[29] = -1.4 * saluteEase;  // right_shoulder_pitch
+      this.data.ctrl[30] = -0.25 * saluteEase; // right_shoulder_roll
+      this.data.ctrl[31] = 0.3 * saluteEase;   // right_shoulder_yaw
+      this.data.ctrl[32] = 1.4 * saluteEase;   // right_elbow
+      this.data.ctrl[34] = -0.3 * saluteEase;  // right_wrist_pitch
+      this.data.ctrl[35] = 0.2 * saluteEase;   // right_wrist_yaw
+      // Fingers stay open (0) during salute
+    }
+
+    // Four-wheeler autonomous driving activity
+    if (this.params["scene"] === "four_wheeler.xml" && this.activityActive) {
+      const t = this.data.time;
+      const speed = 8.0;
+      
+      // Simple circular driving pattern with occasional turns
+      const turnPhase = Math.floor(t / 3) % 4;
+      
+      if (turnPhase === 0 || turnPhase === 2) {
+        // Drive straight
+        this.data.ctrl[0] = speed;   // fl_motor
+        this.data.ctrl[1] = speed;   // fr_motor
+        this.data.ctrl[2] = speed;   // rl_motor
+        this.data.ctrl[3] = speed;   // rr_motor
+      } else if (turnPhase === 1) {
+        // Turn left
+        this.data.ctrl[0] = speed * 0.3;   // fl_motor (slow)
+        this.data.ctrl[1] = speed;         // fr_motor (fast)
+        this.data.ctrl[2] = speed * 0.3;   // rl_motor (slow)
+        this.data.ctrl[3] = speed;         // rr_motor (fast)
+      } else {
+        // Turn right
+        this.data.ctrl[0] = speed;         // fl_motor (fast)
+        this.data.ctrl[1] = speed * 0.3;   // fr_motor (slow)
+        this.data.ctrl[2] = speed;         // rl_motor (fast)
+        this.data.ctrl[3] = speed * 0.3;   // rr_motor (slow)
+      }
+    }
+
     // Draw Tendons and Flex verts
     drawTendonsAndFlex(this.mujocoRoot, this.model, this.data);
 

@@ -1,0 +1,62 @@
+<mujoco model="four_wheeler">
+  <compiler angle="radian" autolimits="true"/>
+  
+  <option timestep="0.005" gravity="0 0 -9.81">
+    <flag contact="enable" gravity="enable"/>
+  </option>
+
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1="0.2 0.2 0.2" rgb2="0.3 0.3 0.3"/>
+    <material name="grid" texture="grid" texrepeat="2 2" texuniform="true" reflectance="0.1"/>
+    <material name="chassis" rgba="0.2 0.5 0.8 1"/>
+    <material name="wheel" rgba="0.1 0.1 0.1 1"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0 0 3" dir="0 0 -1" diffuse="0.8 0.8 0.8"/>
+    <geom name="floor" type="plane" size="10 10 0.1" material="grid" condim="3" friction="1 0.005 0.0001"/>
+    
+    <!-- Main Chassis -->
+    <body name="chassis" pos="0 0 0.3">
+      <freejoint/>
+      <geom name="chassis_main" type="box" size="0.3 0.2 0.05" material="chassis" mass="5"/>
+      <geom name="chassis_top" type="box" size="0.15 0.15 0.08" pos="0 0 0.1" material="chassis" mass="1"/>
+      
+      <!-- Front Left Wheel -->
+      <body name="front_left_wheel" pos="0.25 0.25 0">
+        <joint name="fl_wheel" type="hinge" axis="0 1 0" damping="0.1"/>
+        <geom name="fl_wheel_geom" type="cylinder" size="0.08 0.03" rgba="0.1 0.1 0.1 1" mass="0.5" friction="1.5 0.005 0.0001"/>
+      </body>
+      
+      <!-- Front Right Wheel -->
+      <body name="front_right_wheel" pos="0.25 -0.25 0">
+        <joint name="fr_wheel" type="hinge" axis="0 1 0" damping="0.1"/>
+        <geom name="fr_wheel_geom" type="cylinder" size="0.08 0.03" rgba="0.1 0.1 0.1 1" mass="0.5" friction="1.5 0.005 0.0001"/>
+      </body>
+      
+      <!-- Rear Left Wheel -->
+      <body name="rear_left_wheel" pos="-0.25 0.25 0">
+        <joint name="rl_wheel" type="hinge" axis="0 1 0" damping="0.1"/>
+        <geom name="rl_wheel_geom" type="cylinder" size="0.08 0.03" rgba="0.1 0.1 0.1 1" mass="0.5" friction="1.5 0.005 0.0001"/>
+      </body>
+      
+      <!-- Rear Right Wheel -->
+      <body name="rear_right_wheel" pos="-0.25 -0.25 0">
+        <joint name="rr_wheel" type="hinge" axis="0 1 0" damping="0.1"/>
+        <geom name="rr_wheel_geom" type="cylinder" size="0.08 0.03" rgba="0.1 0.1 0.1 1" mass="0.5" friction="1.5 0.005 0.0001"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <velocity name="fl_motor" joint="fl_wheel" kv="10" gear="1" ctrllimited="true" ctrlrange="-10 10"/>
+    <velocity name="fr_motor" joint="fr_wheel" kv="10" gear="1" ctrllimited="true" ctrlrange="-10 10"/>
+    <velocity name="rl_motor" joint="rl_wheel" kv="10" gear="1" ctrllimited="true" ctrlrange="-10 10"/>
+    <velocity name="rr_motor" joint="rr_wheel" kv="10" gear="1" ctrllimited="true" ctrlrange="-10 10"/>
+  </actuator>
+
+  <sensor>
+    <framepos name="chassis_pos" objtype="body" objname="chassis"/>
+    <framelinvel name="chassis_vel" objtype="body" objname="chassis"/>
+  </sensor>
+</mujoco>

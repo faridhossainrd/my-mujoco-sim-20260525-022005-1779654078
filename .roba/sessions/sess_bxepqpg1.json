@@ -1,0 +1,20 @@
+{
+  "sessionId": "sess_bxepqpg1",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "\nHey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses\n\"Get the robot to wave hello\"\n\"Make it do a little dance\"\n\"Have it take a bow\"\n\n⚙️ Simulation & Physics\n\"Test balance on uneven ground\"\n\"Simulate a fall and recovery\"\n\"Adjust gravity for moon walking\"\n\n🛠️ Customise & Extend\n\"Add a new tool to its hand\"\n\"Create a custom walking gait\"\n\"Program a yoga routine\""
+    },
+    {
+      "role": "user",
+      "content": "make a 4 wheeler robot"
+    },
+    {
+      "role": "assistant",
+      "content": "Perfect! 🚗 Your 4-wheeler robot is ready! Here's what I created:\n\n## 🤖 Four-Wheeler Robot Features:\n\n**Design:**\n- Blue rectangular chassis with a raised \"cabin\" section\n- 4 independently motorized black wheels (cylinder geometry)\n- Freejoint for full 6DOF mobility on the ground\n- Total mass: ~7 kg (stable for realistic physics)\n\n**Physics:**\n- High wheel friction (1.5) for good traction\n- Velocity actuators on all 4 wheels (control range: -10 to 10 rad/s)\n- Sensors for chassis position and velocity tracking\n\n**Autonomous Driving:**\nThe robot automatically drives in a pattern:\n- **Straight segments** - all wheels at full speed\n- **Left turns** - right wheels faster than left\n- **Right turns** - left wheels faster than right\n- Pattern repeats every 12 seconds\n\n**Controls (data.ctrl):**\n- `ctrl[0]` = front-left wheel speed\n- `ctrl[1]` = front-right wheel speed\n- `ctrl[2]` = rear-left wheel speed\n- `ctrl[3]` = rear-right wheel speed\n\nSelect **\"four_wheeler.xml\"** from the scene dropdown and watch it drive! The robot will automatically navigate around. You can also manually control the wheels using the control sliders if you want to drive it yourself.\n\nWant me to add steering, a camera mount, or different driving behaviors (figure-8, obstacle avoidance, etc.)? 🏎️"
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780474902227
+}

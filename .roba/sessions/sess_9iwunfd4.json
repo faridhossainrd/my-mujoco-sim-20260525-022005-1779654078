@@ -1,0 +1,12 @@
+{
+  "sessionId": "sess_9iwunfd4",
+  "fullHistory": [
+    {
+      "role": "assistant",
+      "content": "\nHey! I'm Roba Copilot — your co-pilot for the Unitree G1. Here's what we can do together:\n\n🤖 Motion & Poses\n\"Make the robot wave hello\"\n\"Have it do a little dance\"\n\"Strike a superhero pose\"\n\n⚙️ Simulation & Physics\n\"Test balance on uneven ground\"\n\"Simulate pushing against a wall\"\n\"Check joint limits during motion\"\n\n🛠️ Customise & Extend\n\"Add a new tool to its hand\"\n\"Create a custom walking gait\"\n\"Change the lighting and materials\""
+    }
+  ],
+  "compressionCount": 0,
+  "workspaceRoot": "/home/farid/mojoco/robacreatorhub_server2/roba/roba-laravel/repos/faridhossainrd/my-mujoco-sim-20260525-022005-1779654078",
+  "savedAt": 1780474912769
+}
